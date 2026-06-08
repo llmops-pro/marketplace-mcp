@@ -1,0 +1,14 @@
+node_modules
+dist
+.env
+*.log
+marketplace-mcp-audit.log
+.DS_Store
+
+# Throwaway operational scripts / listing-copy drafts (not part of the sellable source)
+announce-*.mjs
+announce-*.txt
+hide-old-*.mjs
+republish-*.mjs
+introducing-nostr-merchant.md
+nostr-merchant-desc.md

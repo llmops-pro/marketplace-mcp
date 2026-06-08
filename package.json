@@ -1,0 +1,58 @@
+{
+  "name": "marketplace-mcp",
+  "version": "0.2.1",
+  "description": "MCP server for NOSTR marketplace publishing. Two dialects in one server: NIP-15 stalls + products (kind:30017/30018) for NIP-15-native clients, AND Shopstr-modern shop profile + NIP-99 classified listings (kind:30019/30402) with automatic Shopstr cache-POST so the events surface on shopstr.store. Built on NDK; nsec or NIP-46 signer.",
+  "type": "module",
+  "license": "MIT",
+  "author": "LLMOps.Pro <https://njump.me/npub1hdg932jvwc3jdvkqywgqv0ue4nn60exrf92asy8mtazt3hjg7d2s2yw0nw>",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "nostr",
+    "nip-15",
+    "nip-99",
+    "shopstr",
+    "marketplace",
+    "ndk",
+    "claude",
+    "ai-agent",
+    "llm",
+    "bitcoin",
+    "lightning"
+  ],
+  "bin": {
+    "marketplace-mcp": "dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    ".env.example",
+    "examples"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --target node20 --clean --shims",
+    "dev": "tsx watch src/index.ts",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "@nostr-dev-kit/ndk": "^2.0.0",
+    "nostr-tools": "^2.0.0",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsup": "^8.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.5.0",
+    "vitest": "^2.0.0"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "packageManager": "pnpm@9.15.0"
+}

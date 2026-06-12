@@ -46,7 +46,7 @@ async function main(): Promise<void> {
   });
 
   const server = new McpServer(
-    { name: "marketplace-mcp", version: "0.2.2" },
+    { name: "marketplace-mcp", version: "0.2.3" },
     { capabilities: { tools: {} } },
   );
 

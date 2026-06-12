@@ -1,0 +1,46 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.llmops-pro/marketplace-mcp",
+  "description": "Publish and manage marketplace listings on Nostr: NIP-15 stalls/products plus the Shopstr-modern dialect (kind 30019/30402 with cache POST) \u2014 lets an agent run a storefront end-to-end.",
+  "repository": {
+    "url": "https://github.com/llmops-pro/marketplace-mcp",
+    "source": "github"
+  },
+  "version": "0.2.3",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "marketplace-mcp",
+      "version": "0.2.3",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "NOSTR_RELAYS",
+          "description": "Comma-separated wss:// relay URLs",
+          "isRequired": true,
+          "isSecret": false
+        },
+        {
+          "name": "NOSTR_NIP46_URI",
+          "description": "NIP-46 bunker URI (preferred signer)",
+          "isRequired": false,
+          "isSecret": true
+        },
+        {
+          "name": "NOSTR_PRIVATE_KEY",
+          "description": "nsec private key (alternative to NOSTR_NIP46_URI)",
+          "isRequired": false,
+          "isSecret": true
+        },
+        {
+          "name": "SHOPSTR_CACHE_ENABLED",
+          "description": "Set true to POST Shopstr-dialect events to the Shopstr cache after relay publish",
+          "isRequired": false,
+          "isSecret": false
+        }
+      ]
+    }
+  ]
+}

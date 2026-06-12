@@ -1,6 +1,6 @@
 {
   "name": "marketplace-mcp",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "MCP server for NOSTR marketplace publishing. Two dialects in one server: NIP-15 stalls + products (kind:30017/30018) for NIP-15-native clients, AND Shopstr-modern shop profile + NIP-99 classified listings (kind:30019/30402) with automatic Shopstr cache-POST so the events surface on shopstr.store. Built on NDK; nsec or NIP-46 signer.",
   "type": "module",
   "license": "MIT",
@@ -54,5 +54,13 @@
   "engines": {
     "node": ">=20"
   },
-  "packageManager": "pnpm@9.15.0"
+  "packageManager": "pnpm@9.15.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/llmops-pro/marketplace-mcp.git"
+  },
+  "homepage": "https://github.com/llmops-pro/marketplace-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/llmops-pro/marketplace-mcp/issues"
+  }
 }
